@@ -1,0 +1,8 @@
+﻿data_files,data_source,known_missing,page,location,notes,provided,cited
+cbo-2020-01-economicprojections.xlsx,CBO Economic Forecasts,,1,data/raw,,,
+cbo-2020-07-economicprojections.xlsx,CBO Economic Forecasts,,1,,,,
+covid19-death-counts.csv,CDC COVID-19 Data,,1,data/raw,,,
+covasim.pdf,Covasim Model,,1,data/raw,,,
+2019gender_table1.xlsx,American Community Survey 2019,,2,data/raw,,,
+2019mentalhealth.pdf,"National Center for Health Statistics, National Health Interview Survey Early Release Program",,2,data/raw,,,
+2020pulsementalhealth.csv,Household Pulse Survey,,2,data/raw,,,
