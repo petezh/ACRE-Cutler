@@ -12,6 +12,9 @@ crit_severe <- read.csv("data/analysis/impairment.csv")
 covid_deaths <- read.csv("data/analysis/covid_deaths.csv")
 covid_deaths$End.Date = as.Date(covid_deaths$End.Date, "%m/%d/%Y")
 
+# load COVID deaths data
+mental_health <- read.csv("data/analysis/mental_health.csv")
+
 # set VSL
 VSL <- 7000000
 
@@ -58,12 +61,19 @@ value_impairments = 0.35 * VSL * impairments
 
 # 4. Mental Health Impairment
 
-anx_dep_increase = .409-.11
+anx_dep_2019 = mental_health[which(mental_health$Indicator == 'Symptoms of Anxiety Disorder and/or Depressive disorder' & mental_health$Time.Period.Label == 'Apr - Jun, 2019'),]$Value
+anx_dep_2020 = mental_health[which(mental_health$Indicator == 'Symptoms of Anxiety Disorder and/or Depressive disorder' & mental_health$Time.Period.Label == 'July 16 - July 21, 2020'),]$Value
+anx_dep_increase = anx_dep_2020 - anx_dep_2019
 
 # disagreement: adult population is 251M, not 266M, https://www.kff.org/other/state-indicator/distribution-by-age/
 adult_pop = 250744800
-new_anx_dep = anx_dep_increase * adult_pop
+new_anx_dep = anx_dep_increase/100 * adult_pop
 value_mentalhealth = new_anx_dep * 0.2 * VYL
+
+GDP_losses
+value_deaths
+value_impairments
+value_mentalhealth
 
 # summation
 total_value = GDP_losses + value_deaths + value_impairments + value_mentalhealth
