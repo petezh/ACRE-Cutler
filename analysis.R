@@ -79,3 +79,8 @@ value_mentalhealth
 total_value = GDP_losses + value_deaths + value_impairments + value_mentalhealth
 total_value
 
+adult_pop = 266000000
+new_anx_dep = anx_dep_increase/100 * adult_pop
+value_mentalhealth = new_anx_dep * 0.2 * VYL
+
+value_mentalhealth
