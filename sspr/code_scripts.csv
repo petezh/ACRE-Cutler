@@ -1,6 +1,6 @@
 ﻿file_name,location,inputs,outputs,description,primary_type
-analysis.R,,projections.csv; impairments.csv; covid_deaths.csv,Table 1,"Calculates total value loss from GDP and health data, produces Figure 1 and Figure 2",analysis
-CS Covid model replication.xlsx,,cbo-2020-01-economicprojections.xlsx; cbo-2020-07-economicprojections.xlsx,projections.csv,Collects GDP data,cleaning
-CS Covid model replication.xlsx,,covid19-death-counts.csv,covid_deaths.csv,Subsets COVID-19 data,cleaning
-CS Covid model replication.xlsx,,covid19-death-counts.csv; covasim.pdf,impairments.csv,Computes impairment data,cleaning
-CS Covid model replication.xlsx,,2019gender_table1.xlsx; 2019mentalhealth.pdf; 2020pulsementalhealth.csv,mental_health.csv,Collects mental health data,cleaning
+analysis.R,,projections.csv; impairments.csv; covid_deaths.csv; mental_health.csv,Table 1,"Calculates total value loss from GDP and health data, produces Figure 1 and Figure 2",analysis
+manual,,cbo-2020-01-economicprojections.xlsx; cbo-2020-07-economicprojections.xlsx,projections.csv,Collect GDP data,cleaning
+manual,,covid19-death-counts.csv,covid_deaths.csv,Subset COVID-19 data,cleaning
+manual,,covid19-death-counts.csv; covasim.pdf,impairments.csv,Compute impairment data,cleaning
+manual,,2019gender_table1.xlsx; 2019mentalhealth.pdf; 2020pulsementalhealth.csv,mental_health.csv,Collect mental health data,cleaning
