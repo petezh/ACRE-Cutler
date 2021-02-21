@@ -26,7 +26,7 @@ mental_health <- read.csv("data/analysis/mental_health.csv")
 VSL <- 7000000
 
 # set value of lifeyear
-VYL <- 100000
+VLY <- 100000
 
 # 3. Reproduction
 
