@@ -3,4 +3,3 @@ projections.csv,data/analysis,Combined January 2020 and July 2020 GDP forecasts 
 impairments.csv,data/analysis,Covasim model stats and CDC data for impairments
 covid_deaths.csv,data/analysis,CDC national counts for deaths
 mental_health.csv,data/analysis,Survey data for mental health
-mental_health.csv,data/analysis/,Mental health survey data

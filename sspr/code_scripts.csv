@@ -1,6 +1,9 @@
 ﻿file_name,location,inputs,outputs,description,primary_type
 analysis.R,,projections.csv; impairments.csv; covid_deaths.csv; mental_health.csv,Table 1,"Calculates total value loss from GDP and health data, produces Figure 1 and Figure 2",analysis
-manual,,cbo-2020-01-economicprojections.xlsx; cbo-2020-07-economicprojections.xlsx,projections.csv,Collect GDP data,cleaning
-manual,,covid19-death-counts.csv,covid_deaths.csv,Subset COVID-19 data,cleaning
-manual,,covid19-death-counts.csv; covasim.pdf,impairments.csv,Compute impairment data,cleaning
-manual,,2019gender_table1.xlsx; 2019mentalhealth.pdf; 2020pulsementalhealth.csv,mental_health.csv,Collect mental health data,cleaning
+cleaning.R,,cbo-2020-01-economicprojections.xlsx; cbo-2020-07-economicprojections.xlsx,projections.csv,Collect GDP data,cleaning
+cleaning.R,,covid19-death-counts.csv,covid_deaths.csv,Subset COVID-19 data,cleaning
+cleaning.R,,covid_by_age.csv; covasim.csv,impairments.csv,Compute impairment data,cleaning
+cleaning.R,,2019gender_table1.xlsx; 2019nchsmentalhealth.csv; 2020pulsementalhealth.csv,mental_health.csv,Collect mental health data,cleaning
+manual,,covid_by_age_snapshot.pdf,covid_by_age.csv,Transcribed to CSV,cleaning
+manual,,covasim.pdf,covasim.csv,Transcribed to CSV,cleaning
+manual,,2019mentalhealth.pdf,2019nchsmentalhealth.csv,Transcribed to CSV,cleaning

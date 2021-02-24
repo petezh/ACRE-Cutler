@@ -8,7 +8,36 @@ The data and calculations were based on the [Appendix](https://scholar.harvard.e
 
 An installation of [R](https://cran.r-project.org/mirrors.html) will be required to run the analysis and cleaning scripts.
 
-The reproduction is based on the following data sources, which are available in the `data/raw` subfolder.:
+The following is a diagram of all inputs and outputs, where "manual" indicates a manual transcription:
+
+```
+  Table 1
+  └── analysis.R
+      ├── projections.csv
+      │   └── cleaning.R
+      │       ├── cbo-2020-01-economicprojections.xlsx
+      │       └── cbo-2020-07-economicprojections.xlsx
+      ├── impairments.csv
+      │   └── cleaning.R
+      │       ├── covid_by_age.csv
+      │       │   └── manual
+      │       │       └── covid_by_age_snapshot.pdf
+      │       └── covasim.csv
+      │           └── manual
+      │               └── covasim.pdf
+      ├── covid_deaths.csv
+      │   └── cleaning.R
+      │       └── covid19-death-counts.csv
+      └── mental_health.csv
+          └── cleaning.R
+              ├── 2019nchsmentalhealth.csv
+              │   └── manual
+              │       └── 2019mentalhealth.pdf
+              ├── 2019gender_table1.xlsx
+              └── 2020pulsementalhealth.csv
+```
+
+The reproduction is based on the following data sources, which are available in the `data/raw` subfolder:
 
 - Weekly COVID-19 death counts from the [CDC](https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab).
 - A September [snapshot](https://www.ozarkfinancialnwa.com/files/53596/FirstTrust.Covid-19Tracker.2020.09.10.pdf) of COVID-19 deaths counts by age and gender from the [CDC](https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm).
