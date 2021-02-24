@@ -1,5 +1,5 @@
 ﻿file_name,location,inputs,outputs,description,primary_type
-analysis.R,,projections.csv; impairments.csv; covid_deaths.csv; mental_health.csv,Table 1,"Calculates total value loss from GDP and health data, produces Figure 1 and Figure 2",analysis
+analysis.R,,projections.csv; impairments.csv; covid_deaths.csv; mental_health.csv,Table 1; Figure 1; Figure 2,"Calculates total value loss from GDP and health data, produces Figure 1 and Figure 2",analysis
 cleaning.R,,cbo-2020-01-economicprojections.xlsx; cbo-2020-07-economicprojections.xlsx,projections.csv,Collect GDP data,cleaning
 cleaning.R,,covid19-death-counts.csv,covid_deaths.csv,Subset COVID-19 data,cleaning
 cleaning.R,,covid_by_age.csv; covasim.csv,impairments.csv,Compute impairment data,cleaning
