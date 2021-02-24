@@ -1,12 +1,23 @@
-# Cleaning COVID-19 related data, reproducing Cutler and Summers 2020
-# @author: petez
+# Cleaning for "The COVID-19 Pandemic and the $16 Trillion Virus" by Cutler and Summers
+# @author: petezh
 
-library(tidyverse)
-library(readxl)
+#######
+# SETUP
+#######
 
-setwd('C:\\Users\\thepe\\Documents\\GitHub\\acre-cutler')
+# loading required libraries
+list.of.packages <- c("tidyverse", "readxl", "here")
 
-# 1. Clean GDP data
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos= "https://cran.r-project.org/")
+
+lapply(list.of.packages, library, character.only = TRUE)
+
+setwd(here())
+
+######
+# GDP
+######
 
 Year = c(2019:2030)
 
@@ -25,7 +36,9 @@ Post.Covid <- tail(as.numeric(jul_df[12,]), 12)
 # write to csv
 write.csv(data.frame(Year, Pre.Covid, Post.Covid), "data/analysis/projections.csv", row.names=FALSE)
 
-# 2. Clean COVID Deaths
+#############
+# COVID DEATHS
+#############
 
 # raw jan 2020 projection
 covid_data <- read.csv('data/raw/covid19-death-counts.csv')
@@ -37,7 +50,9 @@ clean_data <- subset(covid_data, State == 'United States' & Group == 'By Week',
 # write to csv
 write.csv(clean_data, 'data/analysis/covid_deaths.csv', row.names=FALSE)
 
-# 3. Clean Mental Health
+######
+# MENTAL HEALTH
+######
 
 # read 2019 data
 mhdata_2019 <- read.csv('data/raw/2019nchsmentalhealth.csv')
@@ -56,7 +71,9 @@ mhdata_2020 <- mhdata_2020  %>% rename(Time.Period = Time.Period.Label)
 # combine and write to csv
 write.csv(rbind(mhdata_2019, mhdata_2020), 'data/analysis/mental_health.csv', row.names=FALSE)
 
-# 4. Clean Impairment
+############
+# IMPAIRMENTS
+############
 
 # covid deaths by age
 covid_age <- read.csv('data/raw/covid_by_age.csv')
@@ -92,7 +109,9 @@ impairments$Impairments.New = impairments$New.COVID.19.Deaths * impairments$Rati
 
 write.csv(impairments[c('Age', 'Impairments', 'Impairments.New')], 'data/analysis/impairments.csv', row.names=FALSE)
 
-# 5. Population
+############
+# POPULATION
+############
 
 # read ACS data
 ACS <- read_excel('data/raw/2019gender_table1.xlsx', sheet='Age Sex')

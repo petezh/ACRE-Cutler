@@ -1,4 +1,4 @@
-# Reproduction of "The COVID-19 Pandemic and the $16 Trillion Virus" by Cutler and Summers
+# Analysis for "The COVID-19 Pandemic and the $16 Trillion Virus" by Cutler and Summers
 # @author: petezh
 
 #######
@@ -12,6 +12,8 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages, repos= "https://cran.r-project.org/")
 
 lapply(list.of.packages, library, character.only = TRUE)
+
+setwd(here())
 
 #########
 # SOURCES
@@ -111,6 +113,7 @@ total_main_pe <- GDP_main_pe + deaths_main_pe + impairments_main_pe + mentalheal
 ###########
 
 # 1. Change Impairment Ratio
+
 # use death data to calculate ratio
 futureratio_alt1 = (52*weeklydeaths_so+currentdeaths_so)/currentdeaths_so
 # recalculate impairments estimate
@@ -131,6 +134,7 @@ impairments_alt2_pe <- sum(impairments_so$Impairments) * futureratio_alt2 * comp
 total_alt2_pe = GDP_main_pe + deaths_alt2_pe + impairments_alt2_pe + mentalhealth_main_pe
 
 # 3. Change Adult Pop
+
 # use new adult pop estimate
 adultpop_alt3 = 250563000
 # recalculate mental health estimate
