@@ -1,6 +1,6 @@
 # Reproduction Package for "The COVID-19 Pandemic and the $16 Trillion Virus"
 
-This is a reproduction package for "The COVID-19 Pandemic and the $16 Trillion Virus" by [Cutler and Summers (2020)](https://jamanetwork.com/journals/jama/fullarticle/2771764). The effort followed the [Guide for Accelerating Computational Reproducibility](https://bitss.github.io/ACRE/) (ACRE) from the [Berkeley Initiative for Transparency in the Social Sciences](https://www.bitss.org/) (BITSS).
+This is a reproduction package for "The COVID-19 Pandemic and the $16 Trillion Virus" by [Cutler and Summers (2020)](https://jamanetwork.com/journals/jama/fullarticle/2771764). The effort followed the [Guide for Accelerating Computational Reproducibility](https://bitss.github.io/ACRE/) (ACRE) from the [Berkeley Initiative for Transparency in the Social Sciences](https://www.bitss.org/) (BITSS). The reproduction attempt is logged [here](https://www.socialsciencereproduction.org/reproductions/af00dae3-c8b7-47e8-957c-415c6e213f74/index) on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP). For interested reproducers, this record also includes suggestions for potential improvements.
 
 The data and calculations were based on the [Appendix](https://scholar.harvard.edu/files/cutler/files/cs_appendix.pdf) and a provided [replication model](https://github.com/petezh/ACRE-Cutler-Summers/blob/main/resources/model%20replication.xlsx), which are available in the `resources` folder.
 
@@ -59,6 +59,8 @@ The `analysis.R` script accepts these datasets as inputs, as well as other estim
 1. *Change Future Ratio* - The ratio of total (current + future) deaths to current deaths, used to project future impairments. The authors estimate the value to be "625,000/250,000", which appears unjustified by their own estimates. The value is recomputed using the deaths estimates.
 2. *Update COVID-19 Deaths* - The new COVID-19 death counts by the CDC yield a greater estimate of deaths by September 25th. The updated value is added to the model.
 3. *Change Adult Population* - The authors use a value of 263,000,000 for the number of American adults, which is then used to compute mental health impairments. The ACS indicates that the number of adults is 250,563,000.
+
+### Results
 
 The table of results, for both the author's specifications and the three alternatives, is stored as `results_fig.png` and is displayed below.
 
