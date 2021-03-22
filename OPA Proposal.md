@@ -85,6 +85,7 @@ The following are possible robustness checks:
 2. *Update COVID-19 Deaths* - The new COVID-19 death counts by the CDC yield a greater estimate of deaths by September 25th. The updated value is added to the model.
 3. *Change Adult Population* - The authors use a value of 263,000,000 for the number of American adults, which is then used to compute mental health impairments. The ACS indicates that the number of adults is 250,563,000.
 4. *COVASIM* - Vary estimates for proportions of impairments by age bracket.
+5. *VSL* - Change value of a statistical life.
 
 ### Output
 
