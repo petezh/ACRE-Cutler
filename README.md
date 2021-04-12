@@ -54,11 +54,11 @@ The raw data are processed by the `cleaning.R` script, which outputs the followi
 - `mental_health.csv` - Compiled results from 2019 and 2020 mental health surveys.
 - `projections.csv` - Pre- and post-COVID 10-year GDP projections.
 
-The `analysis.R` script accepts these datasets as inputs, as well as other estimates outlined in the  [Appendix](https://scholar.harvard.edu/files/cutler/files/cs_appendix.pdf). It produces both figures from the appendix, `gdp_fig.png` and `deaths_fig.png`, and saves them to the `results` folder.
+The `analysis.R` script accepts these datasets as inputs, as well as other estimates outlined in the  [Appendix](https://scholar.harvard.edu/files/cutler/files/cs_appendix.pdf). It produces both figures from the appendix, `gdp_fig.png` and `deaths_fig.png`, and saves them to the `results` folder. The script then uses the authors' methodology to estimate the cost of the COVID pandemic.
 
 ### Robustness Checks
 
-The script then uses the authors' methodology to estimate the cost of the COVID pandemic. After verifying the authors' estimate, it adopts the following alternative parameters:
+After verifying the authors' estimate, it adopts the following alternative parameters:
 
 1. *Change Future Ratio* - The ratio of total (current + future) deaths to current deaths, used to project future impairments. The authors estimate the value to be "625,000/250,000", which appears unjustified by their own estimates. The value is recomputed using the deaths estimates.
 2. *Update COVID-19 Deaths* - The new COVID-19 death counts by the CDC yield a greater estimate of deaths by September 25th. The updated value is added to the model.
